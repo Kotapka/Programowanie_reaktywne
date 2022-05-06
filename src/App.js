@@ -1,14 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import Test1 from "./components/1-componentClass";
-import Test2 from "./components/2-componentFunctional";
-import QuizComponent from "./components/quiz-component";
+import Posts from "./components/posts";
 
 function App() {
   return (
-    <div className="App">
-      <QuizComponent/>
-    </div>
+    <main className="container">
+        <Posts/>
+    </main>
   );
 }
 
