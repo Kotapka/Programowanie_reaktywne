@@ -48,29 +48,30 @@ class Posts extends Component {
            this.setState({currentPage: page});
        };
 
-       handleSort = (path) => {
-              const sortColumn = {...this.state.sortColumn};
-              if (sortColumn.path === path) {
-                  sortColumn.order = (sortColumn.order === 'asc') ? 'desc' : 'asc';
-              } else {
-                  sortColumn.path = path;
-                  sortColumn.order = 'asc';
-              }
-              this.setState({sortColumn});
-          };
+    handleSort = (path) => {
+           const sortColumn = {...this.state.sortColumn};
+           if (sortColumn.path === path) {
+               sortColumn.order = (sortColumn.order === 'asc') ? 'desc' : 'asc';
+           } else {
+               sortColumn.path = path;
+               sortColumn.order = 'asc';
+           }
+           this.setState({sortColumn});
+       };
 
-          renderSortIcon = (column) => {
-              if (column !== this.state.sortColumn.path) {
-                  return null;
-              }
-              if (this.state.sortColumn.order === 'asc') {
-                  return <i className="fa fa-sort-asc"></i>
-              }
+       renderSortIcon = (column) => {
+           if (column !== this.state.sortColumn.path) {
+               return null;
+           }
+           if (this.state.sortColumn.order === 'asc') {
+               return <i className="fa fa-sort-asc"></i>
+           }
 
-              if (this.state.sortColumn.order === 'desc') {
-                  return <i className="fa fa-sort-desc"></i>
-              }
-          };
+           if (this.state.sortColumn.order === 'desc') {
+               return <i className="fa fa-sort-desc"></i>
+           }
+       };
+
 
    render() {
 
