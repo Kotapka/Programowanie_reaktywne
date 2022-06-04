@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Posts from './components/posts';
 import Home from './components/home';
+import LoginForm from './components/loginForm';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import NotFound from './components/notFound'
 
@@ -20,7 +21,7 @@ ReactDOM.render(
                <Route path="/" element={<App/>}>
                    
                 <Route path="home" element={<Home/>}/>
-
+                <Route path="login" element={<LoginForm/>}/>
                 <Route path="posts" element={<Posts/>}/>
                 <Route
                   path="*"
